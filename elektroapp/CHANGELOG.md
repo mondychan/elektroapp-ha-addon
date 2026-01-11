@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.8
+- Linka = cena (Kc), sloupce = spotreba (kWh).
+
 ## 0.1.7
 - Zobrazeni verze doplnku ve footeru misto aktualniho casu.
 - UI hlaska pri chybe pripojeni na InfluxDB.
