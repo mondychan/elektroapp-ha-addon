@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9
+- Planovac spotrebicu (navrhy oken podle ceny).
+- Casovac pro prednacteni zitrka (kazdou hodinu od 13:05).
+
 ## 0.1.8
 - Linka = cena (Kc), sloupce = spotreba (kWh).
 
