@@ -56,4 +56,4 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 
 - Add-on bezi na portu 8000, ale primarne se pouziva Ingress panel v HA.
 - `tarif.vt_periods` se uklada jako retezec a na backendu se prevadi na seznam.
-- Konfigurace se upravuje v HA add-on nastaveni, ne v aplikaci.
+- 
