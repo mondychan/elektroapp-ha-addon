@@ -1,7 +1,8 @@
 name: "Elektroapp"
 slug: "elektroapp"
 description: "Spot prices and energy costs UI with Ingress for Home Assistant"
-version: "0.1.4"
+url: "https://github.com/mondychan/elektroapp-ha-addon"
+version: "0.1.5"
 arch:
   - amd64
   - aarch64
