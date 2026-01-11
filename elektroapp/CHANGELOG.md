@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11
+- Planovac tlacitko presunuto k prepinacum.
+- Dark mode pozadi sjednoceno s HA (#1C1C1C).
+
 ## 0.1.10
 - Planovac schovany pod tlacitko + jen top 1 navrh s jasnym datumem.
 
