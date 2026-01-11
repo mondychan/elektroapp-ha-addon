@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7
+- Zobrazeni verze doplnku ve footeru misto aktualniho casu.
+- UI hlaska pri chybe pripojeni na InfluxDB.
+- Konfigurace rozdelena na ceny a cache ve dvou sloupcich.
+
 ## 0.1.6
 - Osa grafu nakladu/spotreby spravne mapuje Kc a kWh.
 
