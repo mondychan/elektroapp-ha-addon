@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12
+- Planovac: jen budoucnost, top 3 neprekryvaji se, den odstranen.
+- Planovac a souhrn zarovnany podle poradi tlacitek.
+
 ## 0.1.11
 - Planovac tlacitko presunuto k prepinacum.
 - Dark mode pozadi sjednoceno s HA (#1C1C1C).
