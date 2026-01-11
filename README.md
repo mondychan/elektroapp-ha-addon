@@ -1,7 +1,7 @@
 # Elektroapp Home Assistant Add-on
 
 Add-on zobrazuje spotove ceny elektriny a vypocitane naklady na zaklade spotreby
-z InfluxDB. UI je dostupne pres Home Assistant Ingress.
+z InfluxDB. UI je dostupne pres Home Assistant Ingress (panel v postrannim menu).
 
 # Zdroj dat
 Veskera data se stahuji z spotovaelektrina.cz.
@@ -13,6 +13,12 @@ Veskera data se stahuji z spotovaelektrina.cz.
 3. V seznamu add-onu vybrat "Elektroapp" a kliknout Install.
 4. Otevrit konfiguraci add-onu, vyplnit InfluxDB a tarifni parametry.
 5. Start add-onu a otevrit panel (Ingress).
+
+## Pouziti
+
+- Otevri Elektroapp z postranniho panelu Home Assistantu.
+- Vyber datum pro denni graf "Naklady a spotreba".
+- Volitelne zobraz mesicni souhrn a tabulku po dnech.
 
 ## Konfigurace
 
@@ -50,3 +56,4 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 
 - Add-on bezi na portu 8000, ale primarne se pouziva Ingress panel v HA.
 - `tarif.vt_periods` se uklada jako retezec a na backendu se prevadi na seznam.
+- Konfigurace se upravuje v HA add-on nastaveni, ne v aplikaci.
