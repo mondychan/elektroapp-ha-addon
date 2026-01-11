@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.10
+- Planovac schovany pod tlacitko + jen top 1 navrh s jasnym datumem.
+
 ## 0.1.9
 - Planovac spotrebicu (navrhy oken podle ceny).
 - Casovac pro prednacteni zitrka (kazdou hodinu od 13:05).
