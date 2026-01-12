@@ -70,20 +70,29 @@ Zakladni prefix: `/api`
 ### `GET /api/costs`
 - Vraci naklady (spotreba * final cena).
 - Parametry: `date=YYYY-MM-DD` nebo `start`, `end` (ISO).
+- ie. http://192.168.82.120:8005/api/costs?date=2026-01-01
 
 ### `GET /api/daily-summary`
 - Mesicni souhrn po dnech.
 - Parametr: `month=YYYY-MM`.
+- ie. http://192.168.82.120:8005/api/daily-summary?month=2025-12
 
 ### `GET /api/schedule`
 - Planovac spotrebicu podle nejlepsich oken.
 - Parametry: `duration` (min), `count` (pocet navrhu, max 3).
+- ie. http://192.168.82.120:8005/api/schedule?duration=60
 
 ### `GET /api/cache-status`
 - Stav cache (cesta, pocet dni, posledni datum, velikost).
 
 ### `GET /api/version`
 - Verze add-onu.
+
+Api mozno vycitat v ramci HA na localhostu, nebo po otevreni portu i z externich aplikaci. Port je mozno si povolit v nastaveni addonu. 
+"Síť - Změňte porty hostitele, které jsou vystaveny doplňkem"
+Doporucuju nastavit port 8005, s portem 8000 doplnek crashuje.
+
+Api nema zadny overovaci mechanismus, takze opatrne pri otevirani do site.
 
 ## Poznamky
 
