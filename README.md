@@ -52,6 +52,39 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 - `timezone`: Casove pasmo (napr. `Europe/Prague`).
 - `interval`: Interval spotreby (napr. `15m`).
 
+## API endpointy
+
+Zakladni prefix: `/api`
+
+### `GET /api/config`
+- Vraci aktualni konfiguraci (merged z configu + options).
+
+### `GET /api/prices`
+- Vraci ceny pro dnes + zitra (pokud jsou dostupne).
+- Volitelne `date=YYYY-MM-DD` pro konkretni den.
+
+### `GET /api/consumption`
+- Vraci spotrebu z InfluxDB.
+- Parametry: `date=YYYY-MM-DD` nebo `start`, `end` (ISO).
+
+### `GET /api/costs`
+- Vraci naklady (spotreba * final cena).
+- Parametry: `date=YYYY-MM-DD` nebo `start`, `end` (ISO).
+
+### `GET /api/daily-summary`
+- Mesicni souhrn po dnech.
+- Parametr: `month=YYYY-MM`.
+
+### `GET /api/schedule`
+- Planovac spotrebicu podle nejlepsich oken.
+- Parametry: `duration` (min), `count` (pocet navrhu, max 3).
+
+### `GET /api/cache-status`
+- Stav cache (cesta, pocet dni, posledni datum, velikost).
+
+### `GET /api/version`
+- Verze add-onu.
+
 ## Poznamky
 
 - Add-on bezi na portu 8000, ale primarne se pouziva Ingress panel v HA.
