@@ -19,20 +19,30 @@ Veskera data se stahuji z spotovaelektrina.cz.
 - Otevri Elektroapp z postranniho panelu Home Assistantu.
 - Vyber datum pro denni graf "Naklady a spotreba".
 - Volitelne zobraz mesicni souhrn a tabulku po dnech.
+- Odhad vyuctovani ukazuje realny i projektovany odhad za mesic/rok.
+- Planovac spotrebicu najde nejlevnejsi okna pro zadanou delku.
 
 ## Konfigurace
 
 Add-on nacita nastaveni z Home Assistant options (Supervisor). 
 
 ### `dph`
-- Nasobic DPH, napr. `1.21`.
+- Vyse DPH v procentech, napr. `21`.
 
 ### `poplatky`
-- `komodita_sluzba`: Poplatek za sluzbu obchodu (Kc bez DPH / kWh).
-- `poze`: Poplatek POZE (Kc vc DPH / kWh).
-- `dan`: Dan z elektriny (Kc vc DPH / kWh).
-- `distribuce.NT`: Distribuce pro nizky tarif (Kc vc DPH / kWh).
-- `distribuce.VT`: Distribuce pro vysoky tarif (Kc vc DPH / kWh).
+- Vsechny hodnoty jsou bez DPH (Kc / kWh). DPH se aplikuje az ve vypoctu.
+- `komodita_sluzba`: Poplatek za sluzbu obchodu.
+- `oze`: Cena na podporu vykupu elektiny (OZE/POZE).
+- `dan`: Dan z elektriny.
+- `systemove_sluzby`: Systemove sluzby (CEPS).
+- `distribuce.NT`: Distribuce pro nizky tarif.
+- `distribuce.VT`: Distribuce pro vysoky tarif.
+
+### `fixni`
+- Fixni poplatky bez DPH (Kc / den, Kc / mesic).
+- `denni.staly_plat`: Staly plat (Kc/den).
+- `mesicni.provoz_nesitove_infrastruktury`: Nesitova infrastruktura (Kc/mesic).
+- `mesicni.jistic`: Jistic (Kc/mesic).
 
 ### `tarif.vt_periods`
 - Casove intervaly VT (vysoky tarif), format `HH-HH` oddeleny carkou.
@@ -77,6 +87,14 @@ Zakladni prefix: `/api`
 - Parametr: `month=YYYY-MM`.
 - ie. http://192.168.82.120:8005/api/daily-summary?month=2025-12
 
+### `GET /api/billing-month`
+- Odhad vyuctovani pro mesic (realny + projekce).
+- Parametr: `month=YYYY-MM`.
+
+### `GET /api/billing-year`
+- Odhad vyuctovani po mesicich v danem roce.
+- Parametr: `year=YYYY`.
+
 ### `GET /api/schedule`
 - Planovac spotrebicu podle nejlepsich oken.
 - Parametry: `duration` (min), `count` (pocet navrhu, max 3).
@@ -88,8 +106,7 @@ Zakladni prefix: `/api`
 ### `GET /api/version`
 - Verze add-onu.
 
-Api mozno vycitat v ramci HA na localhostu, nebo po otevreni portu i z externich aplikaci. Port je mozno si povolit v nastaveni addonu. 
-"Síť - Změňte porty hostitele, které jsou vystaveny doplňkem"
+Api mozno vycitat v ramci HA na localhostu, nebo po otevreni portu i z externich aplikaci. Port je mozno si povolit v nastaveni add-onu (Network).
 Doporucuju nastavit port 8005, s portem 8000 doplnek crashuje.
 
 Api nema zadny overovaci mechanismus, takze opatrne pri otevirani do site.
@@ -98,4 +115,6 @@ Api nema zadny overovaci mechanismus, takze opatrne pri otevirani do site.
 
 - Add-on bezi na portu 8000, ale primarne se pouziva Ingress panel v HA.
 - `tarif.vt_periods` se uklada jako retezec a na backendu se prevadi na seznam.
-- 
+- Odhad vyuctovani pocita fixni poplatky za cely mesic a variabilni naklady z namerene spotreby.
+- Poplatky se ukladaji do historie podle data zmeny konfigurace, aby zpetne vypocty drzely puvodni hodnoty.
+
