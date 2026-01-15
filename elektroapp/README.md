@@ -19,7 +19,7 @@ Veskera data se stahuji z spotovaelektrina.cz.
 - Otevri Elektroapp z postranniho panelu Home Assistantu.
 - Vyber datum pro denni graf "Naklady a spotreba".
 - Volitelne zobraz mesicni souhrn a tabulku po dnech.
-- Odhad vyuctovani ukazuje realny i projektovany odhad za mesic/rok.
+- Odhad vyuctovani ukazuje realny stav a projekci pro mesic/rok.
 - Planovac spotrebicu najde nejlevnejsi okna pro zadanou delku.
 
 ## Konfigurace
