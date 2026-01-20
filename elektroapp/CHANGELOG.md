@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.47
+- Prodej: podpora exportu z InfluxDB + koeficient snizeni ceny denniho trhu.
+- UI: novy graf prodeje/vyroby, rozsireny mesicni souhrn a vyuctovani.
+
 ## 0.1.46
 - Docker: update runtime base image to python:3.14-slim.
 

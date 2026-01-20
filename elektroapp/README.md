@@ -57,10 +57,14 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 - `measurement`: Nazev measurement (napr. `kWh`).
 - `field`: Nazev field (napr. `value`).
 - `entity_id`: ID entity (napr. `solax_drinov_today_s_import_energy`).
+- `export_entity_id`: ID entity pro export (napr. `solax_drinov_today_s_export_energy`).
 - `username`: Volitelne uzivatelske jmeno.
 - `password`: Volitelne heslo.
 - `timezone`: Casove pasmo (napr. `Europe/Prague`).
 - `interval`: Interval spotreby (napr. `15m`).
+
+### `prodej`
+- `koeficient_snizeni_ceny`: Koeficient snizeni ceny denniho trhu (Kc/MWh).
 
 ## Poznamky
 

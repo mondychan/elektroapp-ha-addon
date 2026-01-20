@@ -12,3 +12,6 @@ configuration:
   influxdb:
     name: "InfluxDB"
     description: "Nastaveni pripojeni pro spotrebu"
+  prodej:
+    name: "Prodej"
+    description: "Nastaveni prodeje elektriny"

@@ -2,7 +2,7 @@ name: "Elektroapp"
 slug: "elektroapp"
 description: "Spot prices and energy costs UI with Ingress for Home Assistant"
 url: "https://github.com/mondychan/elektroapp-ha-addon"
-version: "0.1.46"
+version: "0.1.47"
 arch:
   - amd64
   - aarch64
@@ -13,7 +13,7 @@ ingress_port: 8000
 panel_icon: "mdi:flash"
 image: "mondychan/elektroapp-ha"
 environment:
-  ADDON_VERSION: "0.1.46"
+  ADDON_VERSION: "0.1.47"
 ports:
   8000/tcp: null
 ports_description:
@@ -47,10 +47,13 @@ options:
     measurement: "kWh"
     field: "value"
     entity_id: "solax_drinov_today_s_import_energy"
+    export_entity_id: "solax_drinov_today_s_export_energy"
     username: "electroapp"
     password: "CHANGE_ME"
     timezone: "Europe/Prague"
     interval: "15m"
+  prodej:
+    koeficient_snizeni_ceny: 390
 schema:
   dph: float
   poplatky:
@@ -77,7 +80,10 @@ schema:
     measurement: str
     field: str
     entity_id: str
+    export_entity_id: str?
     username: str?
     password: password?
     timezone: str
     interval: str
+  prodej:
+    koeficient_snizeni_ceny: float?

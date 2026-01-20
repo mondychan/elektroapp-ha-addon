@@ -12,3 +12,6 @@ configuration:
   influxdb:
     name: "InfluxDB"
     description: "Connection settings for consumption data"
+  prodej:
+    name: "Sales"
+    description: "Energy export settings"
