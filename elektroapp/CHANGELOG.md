@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.1.48
+- UI: premenovani nakupu/prodeje v souhrnu a vyuctovani + barevne odliseni.
+- Historie poplatku: koeficient snizeni ceny i pro historicke vypocty.
+
 ## 0.1.47
 - Prodej: podpora exportu z InfluxDB + koeficient snizeni ceny denniho trhu.
-- UI: novy graf prodeje/vyroby, rozsireny mesicni souhrn a vyuctovani.
+- UI: novy graf prodeje/exportu a rozsireny mesicni souhrn.
 
 ## 0.1.46
 - Docker: update runtime base image to python:3.14-slim.
