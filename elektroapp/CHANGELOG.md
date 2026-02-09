@@ -1,7 +1,11 @@
 # Changelog
 
+## 0.1.53
+- Release: navyseni verze addonu na `0.1.53`.
+
 ## 0.1.52
 - Ceny: pro vypocty `costs/export` se pri dotazu na dnesek netaha zbytecne i zitrsi den.
+- Provider: odstraneny cross-fallback mezi zdroji; pouziva se striktne jen zvoleny `price_provider` (+ jeho cache).
 - Influx fallback: presnejsi UI hlaska (`Dotaz na InfluxDB selhal...`) misto zavadejiciho textu.
 - Influx fallback: detailnejsi logovani duvodu (napr. 401/timeout) pri prepnuti na cache.
 
