@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.50
+- OTE: odolnost proti HTTP 500 (fallback na cache/spot provider), aby API nepadalo 500.
+- HA konfigurace: `price_provider` je vyber (radio volby) s hodnotami `spotovaelektrina.cz` a `ote-cr.cz`.
+- Provider parser: akceptuje i alias `ote.cz`.
+
 ## 0.1.49
 - Ceny: pridana podpora volby zdroje (`spotovaelektrina` / `ote`).
 - OTE: nacitani dat z ote-cr.cz + prevod EUR/CZK podle CNB.
