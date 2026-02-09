@@ -57,7 +57,7 @@ options:
     koeficient_snizeni_ceny: 390
 schema:
   dph: float
-  price_provider: str?
+  price_provider: list(spotovaelektrina|ote)?
   poplatky:
     komodita_sluzba: float
     oze: float

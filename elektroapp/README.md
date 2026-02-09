@@ -70,6 +70,7 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 
 ### `price_provider`
 - Zdroj cen pro dnesek/zitrek (`spotovaelektrina` nebo `ote`).
+- V konfiguraci add-onu je tato polozka jako vyberovy seznam.
 - Historie v lokalni cache (`/config/elektroapp/prices-cache`) zustava zachovana.
 
 ## Poznamky
