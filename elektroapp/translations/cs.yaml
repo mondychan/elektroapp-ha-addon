@@ -2,6 +2,9 @@ configuration:
   dph:
     name: "DPH %"
     description: "Napr. 21"
+  price_provider:
+    name: "Zdroj cen"
+    description: "spotovaelektrina nebo ote"
   poplatky:
     name: "Poplatky"
   fixni:

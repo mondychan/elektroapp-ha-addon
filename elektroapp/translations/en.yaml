@@ -2,6 +2,9 @@ configuration:
   dph:
     name: "VAT %"
     description: "Example: 21"
+  price_provider:
+    name: "Price source"
+    description: "spotovaelektrina or ote"
   poplatky:
     name: "Fees"
   fixni:

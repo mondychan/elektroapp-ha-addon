@@ -4,7 +4,9 @@ Add-on zobrazuje spotove ceny elektriny a vypocitane naklady na zaklade spotreby
 z InfluxDB. UI je dostupne pres Home Assistant Ingress (panel v postrannim menu).
 
 # Zdroj dat
-Veskera data se stahuji z spotovaelektrina.cz.
+Zdroj cen je volitelny pres `price_provider`:
+- `spotovaelektrina` (default)
+- `ote` (OTE + prevod EUR/CZK dle CNB)
 
 ## Instalace
 
@@ -65,6 +67,10 @@ Add-on nacita nastaveni z Home Assistant options (Supervisor).
 
 ### `prodej`
 - `koeficient_snizeni_ceny`: Koeficient snizeni ceny denniho trhu (Kc/MWh).
+
+### `price_provider`
+- Zdroj cen pro dnesek/zitrek (`spotovaelektrina` nebo `ote`).
+- Historie v lokalni cache (`/config/elektroapp/prices-cache`) zustava zachovana.
 
 ## Poznamky
 

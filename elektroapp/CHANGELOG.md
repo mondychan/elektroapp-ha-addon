@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.49
+- Ceny: pridana podpora volby zdroje (`spotovaelektrina` / `ote`).
+- OTE: nacitani dat z ote-cr.cz + prevod EUR/CZK podle CNB.
+- API/UI: rucni refresh cen dnes/zitra a zobrazeni aktivniho zdroje.
+- Cache: zachovana kompatibilita historickych dat v `prices-cache`.
+
 ## 0.1.48
 - UI: premenovani nakupu/prodeje v souhrnu a vyuctovani + barevne odliseni.
 - Historie poplatku: koeficient snizeni ceny i pro historicke vypocty.
