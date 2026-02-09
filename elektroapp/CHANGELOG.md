@@ -1,7 +1,13 @@
 # Changelog
 
+## 0.1.51
+- OTE SOAP request: doplnen `SOAPAction` pro `GetDamPricePeriodE`.
+- OTE endpoint: fallback pokus pres `http://www.ote-cr.cz/services/PublicDataService`, pokud `https` selze.
+- Stabilita: dalsi zjemneni fallback logiky pri docasnych chybach OTE.
+
 ## 0.1.50
 - OTE: odolnost proti HTTP 500 (fallback na cache/spot provider), aby API nepadalo 500.
+- OTE: cooldown po chybe, aby se pri vypadku zbytecne neopakovaly requesty.
 - HA konfigurace: `price_provider` je vyber (radio volby) s hodnotami `spotovaelektrina.cz` a `ote-cr.cz`.
 - Provider parser: akceptuje i alias `ote.cz`.
 
