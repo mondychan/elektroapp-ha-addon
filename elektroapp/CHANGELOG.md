@@ -1,9 +1,16 @@
 # Changelog
 
+## 0.1.52
+- Ceny: pro vypocty `costs/export` se pri dotazu na dnesek netaha zbytecne i zitrsi den.
+- Influx fallback: presnejsi UI hlaska (`Dotaz na InfluxDB selhal...`) misto zavadejiciho textu.
+- Influx fallback: detailnejsi logovani duvodu (napr. 401/timeout) pri prepnuti na cache.
+
 ## 0.1.51
 - OTE SOAP request: doplnen `SOAPAction` pro `GetDamPricePeriodE`.
 - OTE endpoint: fallback pokus pres `http://www.ote-cr.cz/services/PublicDataService`, pokud `https` selze.
 - Stabilita: dalsi zjemneni fallback logiky pri docasnych chybach OTE.
+- Ceny: dotazy pro `costs/export` dnes uz nestahuji i zitrsi den.
+- Influx fallback: upraven text hlasky v UI a pridane detailnejsi logovani duvodu fallbacku.
 
 ## 0.1.50
 - OTE: odolnost proti HTTP 500 (fallback na cache/spot provider), aby API nepadalo 500.
