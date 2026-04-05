@@ -1,5 +1,52 @@
 # Changelog
 
+## 0.1.81
+### ⚡ Stabilita
+- Fix: Synchronizace `package-lock.json` pro úspěšný CI/CD build. 
+- (Zahrnuje všechny novinky a opravy z verze 0.1.80, která neprošla buildem na GitHubu).
+
+## 0.1.80
+### 🌟 Novinky
+- **Export do CSV**: Do tabulky měsíčního souhrnu přidáno tlačítko pro stažení dat ve formátu CSV.
+- **Konfigurovatelné prahy**: V nastavení (`config.yaml`) lze nyní upravit prahy pro nízkou a vysokou cenu, které se promítají do alertů a grafů.
+
+### 📱 UI & UX
+- **Rozšířená navigace**: Spodní lišta nyní nabízí jasné přepínání mezi Dashboardem, Náklady, Baterií a Nastavením.
+- **Vylepšené tabulky**: 
+    - Zvýraznění víkendů pro lepší orientaci v historii.
+    - Barevné odlišení Netto hodnot (kWh i Kč) podle bilance (zelená pro zisk/prodej, červená pro nákup/náklady).
+    - Oprava řazení a sjednocení vizuálního stylu bez podbarvení buněk.
+
+### ⚡ Stabilita
+- **TypeScript**: Dokončena migrace klíčových komponent (`App.tsx`, `MonthlySummaryCard.tsx`) a API vrstvy na striktní TypeScript.
+- **CI/CD**: Oprava buildovacího procesu, který blokoval předchozí release.
+- **Refaktorizace**: Výrazné zmenšení hlavního souboru `App.tsx` a rozdělení logiky do hooků.
+
+## 0.1.79
+## 0.1.79 — Velký update analytiky a UI
+Tento release přináší kompletní přepracování vnitřní architektury, výrazné zrychlení díky paralelnímu snapshotování dat a nové analytické nástroje.
+
+### 🌟 Novinky
+- **Cenové alerty**: Horní banner s upozorněním na extrémní ceny a doporučením spotřeby.
+- **Srovnání výkonu**: Nová sekce zobrazující trend spotřeby a nákladů (včera vs před týdnem, včera vs dnes).
+- **Solární předpověď**: Dashboard pro FVE s odhadem výroby, špičkami a zbývající energií pro dnešek/zítřek.
+- **Cenové prahy v grafu**: Vodorovné čárkované čáry v cenovém grafu pro rychlou identifikaci levných a drahých hodin.
+
+### 📱 Mobilní optimalizace & UI
+- **Bottom Nav**: Nová spodní navigace v mobilní verzi pro pohodlné přepínání mezi přehledem a detailem.
+- **Smooth Transitions**: Animované přechody mezi stránkami a prvky pomocí `framer-motion`.
+- **System Dark Mode**: Automatické přepínání světlého a tmavého režimu podle OS.
+
+### ⚡ Výkon & Stabilita
+- **Dashboard Snapshot API**: Načtení všech dat úvodní obrazovky jediným asynchronním požadavkem.
+- **Paralelizace na backendu**: Služby pro ceny, Influx a analytiku běží v `asyncio.gather` paralelně.
+- **Connection Pooling**: Optimalizace dotazů do InfluxDB pomocí `requests.Session` (pooling spojení).
+- **TypeScript**: Migrace většiny frontendu do TS pro vyšší spolehlivost.
+
+### 🔧 Ostatní
+- Rozpad `app_service.py` a `App.js` na menší, udržovatelné moduly.
+- Vylepšené tabulky a barevné indikace (Netto v denním souhrnu).
+
 ## 0.1.78
 - Vizuální redesign tabulek: odstraněno podbarvení pozadí buněk a nahrazeno čistším barevným odlišením samotného textu.
 - Barvy textu (červená pro nákup/náklady, zelená pro prodej/zisky) jsou optimalizovány pro vysoký kontrast ve světlém i tmavém režimu.
