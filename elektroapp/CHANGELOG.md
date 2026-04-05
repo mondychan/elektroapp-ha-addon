@@ -1,11 +1,11 @@
 # Changelog
 
-## 0.1.82
-### ⚡ Stabilita
-- Fix: ESLint varování vyřešena (použití `useCallback`, odstranění nepoužívaných proměnných). 
-- Nyní by měl CI build na GitHubu projít bez chyb.
+## 0.1.84
+### ⚡ Hotfix
+- Fix: "Cannot read properties of undefined (reading 'toFixed')" - přidáno globální ošetření pro chybějící data napříč všemi komponentami (Dashboard, Plánovač, Srovnání, Grafy).
+- Vylepšena odolnost aplikace vůči neúplným odpovědím z API.
 
-## 0.1.81
+## 0.1.83
 ### ⚡ Stabilita
 - Fix: Synchronizace `package-lock.json` pro úspěšný CI/CD build. 
 - (Zahrnuje všechny novinky a opravy z verze 0.1.80, která neprošla buildem na GitHubu).
