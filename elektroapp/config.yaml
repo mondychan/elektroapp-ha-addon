@@ -2,7 +2,7 @@ name: "Elektroapp"
 slug: "elektroapp"
 description: "Spot prices and energy costs UI with Ingress for Home Assistant"
 url: "https://github.com/mondychan/elektroapp-ha-addon"
-version: "0.1.88"
+version: "0.1.89"
 arch:
   - amd64
   - aarch64
@@ -13,7 +13,7 @@ ingress_port: 8000
 panel_icon: "mdi:flash"
 image: "mondychan/elektroapp-ha"
 environment:
-  ADDON_VERSION: "0.1.88"
+  ADDON_VERSION: "0.1.89"
 ports:
   8000/tcp: null
 ports_description:
@@ -84,6 +84,15 @@ options:
     energy_production_tomorrow_entity_id: "sensor.energy_production_tomorrow"
     power_highest_peak_time_today_entity_id: "sensor.power_highest_peak_time_today"
     power_highest_peak_time_tomorrow_entity_id: "sensor.power_highest_peak_time_tomorrow"
+  pnd:
+    enabled: false
+    username: ""
+    password: ""
+    meter_id: ""
+    verify_on_startup: true
+    nightly_sync_enabled: true
+    nightly_sync_window_start_hour: 2
+    nightly_sync_window_end_hour: 7
 schema:
   dph: float
   price_provider: list(spotovaelektrina.cz|ote-cr.cz)?
@@ -147,3 +156,12 @@ schema:
     energy_production_tomorrow_entity_id: str?
     power_highest_peak_time_today_entity_id: str?
     power_highest_peak_time_tomorrow_entity_id: str?
+  pnd:
+    enabled: bool?
+    username: str?
+    password: password?
+    meter_id: str?
+    verify_on_startup: bool?
+    nightly_sync_enabled: bool?
+    nightly_sync_window_start_hour: int?
+    nightly_sync_window_end_hour: int?
