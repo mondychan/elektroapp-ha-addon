@@ -2,7 +2,7 @@ name: "Elektroapp"
 slug: "elektroapp"
 description: "Spot prices and energy costs UI with Ingress for Home Assistant"
 url: "https://github.com/mondychan/elektroapp-ha-addon"
-version: "0.2.16"
+version: "0.2.17"
 arch:
   - amd64
   - aarch64
@@ -13,7 +13,7 @@ ingress_port: 8000
 panel_icon: "mdi:flash"
 image: "mondychan/elektroapp-ha"
 environment:
-  ADDON_VERSION: "0.2.16"
+  ADDON_VERSION: "0.2.17"
 ports:
   8000/tcp: null
 ports_description:
@@ -77,6 +77,9 @@ options:
   forecast_solar:
     enabled: true
     power_now_entity_id: "sensor.power_production_now"
+    power_next_hour_entity_id: "sensor.power_production_next_hour"
+    power_next_12hours_entity_id: "sensor.power_production_next_12hours"
+    power_next_24hours_entity_id: "sensor.power_production_next_24hours"
     energy_current_hour_entity_id: "sensor.energy_current_hour"
     energy_next_hour_entity_id: "sensor.energy_next_hour"
     energy_production_today_entity_id: "sensor.energy_production_today"
@@ -149,6 +152,9 @@ schema:
   forecast_solar:
     enabled: bool?
     power_now_entity_id: str?
+    power_next_hour_entity_id: str?
+    power_next_12hours_entity_id: str?
+    power_next_24hours_entity_id: str?
     energy_current_hour_entity_id: str?
     energy_next_hour_entity_id: str?
     energy_production_today_entity_id: str?
