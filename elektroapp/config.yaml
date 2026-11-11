@@ -2,7 +2,7 @@ name: "Elektroapp"
 slug: "elektroapp"
 description: "Spot prices and energy costs UI with Ingress for Home Assistant"
 url: "https://github.com/mondychan/elektroapp-ha-addon"
-version: "0.3.63"
+version: "0.3.64"
 arch:
   - amd64
   - aarch64
@@ -15,7 +15,7 @@ homeassistant_api: true
 panel_icon: "mdi:flash"
 image: "mondychan/elektroapp-ha"
 environment:
-  ADDON_VERSION: "0.3.63"
+  ADDON_VERSION: "0.3.64"
 ports:
   8000/tcp: null
 ports_description:
@@ -43,6 +43,9 @@ options:
       jistic: 710
   tarif:
     vt_periods: "6-7,9-10,13-14,16-17"
+  nakup:
+    fixni_cena_enabled: false
+    fixni_cena: 0.0
   influxdb:
     host: "192.168.1.100"
     port: 8086
@@ -58,6 +61,8 @@ options:
     interval: "15m"
   prodej:
     koeficient_snizeni_ceny: 390
+    fixni_cena_enabled: false
+    fixni_cena: 0.0
   battery:
     enabled: true
     soc_entity_id: "sensor.solar_battery_capacity"
@@ -166,6 +171,9 @@ schema:
       jistic: float
   tarif:
     vt_periods: str
+  nakup:
+    fixni_cena_enabled: bool
+    fixni_cena: float
   influxdb:
     host: str
     port: int
@@ -181,6 +189,8 @@ schema:
     interval: str
   prodej:
     koeficient_snizeni_ceny: float?
+    fixni_cena_enabled: bool?
+    fixni_cena: float?
   battery:
     enabled: bool?
     soc_entity_id: str?
